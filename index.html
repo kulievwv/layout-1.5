@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1.5</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <header class="header">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</header>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="button">
+                    <img class="lenovo" src="images/lenovo.svg">
+                    <a class="arrow" href="#"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="button">
+                    <img class="logo samsung" src="images/samsung.svg">
+                    <a class="arrow" href="#"></a>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="button">
+                    <img class="logo apple" src="images/apple.svg">
+                    <a class="arrow" href="#"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="button">
+                    <img class="logo hp" src="images/hp.svg">
+                    <a class="arrow" href="#"></a>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="button">
+                    <img class="logo bosch" src="images/bosch.svg">
+                    <a class="arrow" href="#"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="button">
+                    <img class="logo acer" src="images/acer.svg">
+                    <a class="arrow" href="#"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="button">
+                    <img class="logo view_sonic" src="images/view_sonic.svg">
+                    <a class="arrow" href="#"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="button">
+                    <img class="logo sony" src="images/sony.svg">
+                    <a class="arrow" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
+
+    <div class="brands_navigation">
+        <div class="first-row">
+            <div class="button">
+                <img class="lenovo" src="images/lenovo.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button ">
+                <img class="logo samsung" src="images/samsung.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button">
+                <img class="logo apple" src="images/apple.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button">
+                <img class="logo hp" src="images/hp.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="button">
+                <img class="logo bosch" src="images/bosch.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button">
+                <img class="logo acer" src="images/acer.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button">
+                <img class="logo view_sonic" src="images/view_sonic.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button">
+                <img class="logo sony" src="images/sony.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+        </div>
+        <div class="third-row hidden">
+            <div class="button">
+                <img class="logo view_sonic" src="images/view_sonic.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button">
+                <img class="logo sony" src="images/sony.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button">
+                <img class="logo apple" src="images/apple.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+            <div class="button">
+                <img class="logo hp" src="images/hp.svg">
+                <a class="arrow" href="#"></a>
+            </div>
+        </div>
+
+        <button id="show_more"><img class="more_image" src="images/expand.svg"><span id="text-show">Показать все</span></button>
+    </div>
+    <script>
+        const element = document.getElementById("show_more");
+        element.addEventListener("click", myFunction);
+
+        function myFunction() {
+            const el = document.querySelector(".third-row");
+            const hasHidden = el.classList.contains("hidden");
+            const arrow = document.querySelector(".more_image");
+            if (hasHidden) {
+                el.classList.remove("hidden");
+                document.getElementById("text-show").innerHTML = "Скрыть";
+                arrow.classList.add("rotate");
+            } else {
+                el.classList.add("hidden");
+                arrow.classList.remove("rotate")
+                document.getElementById("text-show").innerHTML = "Показать все";
+            }
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

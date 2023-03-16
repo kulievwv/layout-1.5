@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./fonts/TTLakes-Light.woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./fonts/TTLakes-Regular.woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./fonts/TTLakes-Medium.woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./fonts/TTLakes-DemiBold.woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('./fonts/TTLakes-Bold.woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'TT Lakes', "Arial", sans-serif;
+    background-color: #F2F2F2;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.header {
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+    border-top: 2px solid #D9FFF5;
+    padding: 16px;
+}
+
+.button {
+    max-width: 240px;
+    height: 72px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+}
+
+.arrow {
+    background-image: url("images/arrow.svg");
+    width: 40px;
+    height: 40px;
+    margin: 16px 16px 16px auto;
+}
+
+.lenovo {
+    width: 108px;
+    height: 32px;
+    margin-left: 16px;
+}
+
+.samsung {
+    width: 116px;
+    height: 39px;
+    margin-left: 16px;
+}
+
+.apple {
+    width: 44px;
+    height: 44px;
+    margin-left: 16px;
+}
+
+.view_sonic {
+    width: 128px;
+    height: 21px;
+    margin-left: 14px;
+}
+
+.bosch {
+    width: 128px;
+    height: 28px;
+    margin-left: 16px;
+}
+
+.hp {
+    width: 52px;
+    height: 52px;
+    margin-left: 10px;
+}
+
+.acer {
+    height: 24px;
+    width: 94px;
+    margin-left: 16px;
+}
+
+.sony {
+    height: 25px;
+    width: 128px;
+    margin-left: 14px;
+}
+
+@media (max-width: 767px) {
+    .swiper {
+        width: 240px;
+        height: 110px;
+        margin-top: 16px !important;
+    }
+    .swiper-slide div {
+        width: 100%;
+        object-fit: none;
+    }
+    .header {
+        background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+        height: 80px;
+        font-family: TT Lakes;
+        padding: 16px;
+    }
+    .brands_navigation {
+        display: none;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1119px) {
+    .swiper {
+        display: none;
+    }
+    .brands_navigation {
+        display: block;
+        padding: 24px;
+        margin-right: 24px;
+    }
+    .button {
+        flex-shrink: 0;
+        min-width: 240px;
+        margin-right: -24px;
+    }
+    .first-row,
+    .second-row {
+        display: flex;
+    }
+    .first-row .button:last-child,
+    .second-row .button:last-child,
+    .third-row .button:last-child {
+        display: none;
+    }
+    .first-row,
+    .second-row,
+    .third-row {
+        margin-bottom: 16px;
+        justify-content: space-between;
+        box-sizing: border-box;
+        overflow: none;
+        flex-wrap: wrap;
+        display: flex;
+    }
+}
+
+@media(min-width: 1120px) {
+    .swiper {
+        display: none;
+    }
+    .first-row,
+    .second-row,
+    .third-row {
+        display: flex;
+        margin-bottom: 16px;
+        justify-content: space-between;
+        box-sizing: border-box;
+        overflow: none;
+        flex-wrap: wrap;
+    }
+    .brands_navigation {
+        display: block;
+        padding: 24px;
+        margin-right: 24px;
+        ;
+    }
+    .button {
+        flex-shrink: 0;
+        min-width: 240px;
+        margin-right: -24px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#show_more {
+    background-color: #F2F2F2;
+    border: none;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: right;
+    width: 160px;
+    height: 30px;
+    margin-left: 8px;
+    display: flex;
+}
+
+#show_more span {
+    transform: translateY(1px) translateX(10px);
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 1.5s;
+}
+
+#show_more .text-hide {
+    display: none;
+}
