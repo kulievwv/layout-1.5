@@ -195,7 +195,8 @@ body {
         display: block;
         padding: 24px;
         margin-right: 24px;
-        ;
+        max-width: 1120px;
+        margin: 0 auto 0 auto;
     }
     .button {
         flex-shrink: 0;
