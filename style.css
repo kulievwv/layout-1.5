@@ -149,7 +149,7 @@ body {
     .brands_navigation {
         display: block;
         padding: 24px;
-        margin-right: 24px;
+        margin-right: -24px;
     }
     .button {
         flex-shrink: 0;
